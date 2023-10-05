@@ -1,0 +1,441 @@
+/*  1- COMMON STYLES
+    2- GENERAL STYLES
+    3- SECTIONS  
+      3.0  HEADER
+      3.1  HOME SECTION 
+      3.2  ABOUT SECTION 
+      3.3  PORTFOLIO SECTION .
+      3.4  OFFER SECTION .
+      3.5  SERVICE SECTION .
+      3.6  NUMBERS SECTION .
+      3.7  PRICING SECTION .
+      3.8  TESTIMONIAL SECTION .
+      3.9  TEAM SECTION 
+      3.10 BLOG SECTION 
+      3.11 FOOTER SECTION
+ */
+/* 1- COMMON STYLES.......................................................................................... */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7)
+}
+.hover-opacity{
+    transition:opacity .5;
+}
+.hover-opacity:hover{
+    opacity: .7;
+}
+.ltr{
+    position: relative;
+}
+.ltr:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top:0;
+    left:0;
+    background-color: #333; 
+}
+.ltr:hover:after{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: -1;
+     }
+/* 2- GENERAL STYLES........................................................................................ */
+     body {
+     font-family: 'varela round' , sans-serif;
+    }
+ *  {
+     margin:0;
+     padding: 0;
+     box-sizing: border-box;
+     }
+    .container {
+     width:80%;
+     margin: auto;
+     }
+     a {
+        text-decoration: none;
+     }
+     .section-header {
+         text-align: center;   
+     }
+     .section-header .section-title{
+         font-size: 35px;
+         text-transform: capitalize;
+         margin-bottom: 9px;
+         margin-top: 6px;
+     }
+     .section-header .line{
+         display: block;
+         width: 62px;
+         height: 4px;
+         background-color: royalblue;
+        margin: 0  auto  70px  auto;
+     }
+/* 3- SECTIONS.............................................................................................. */
+/* 3.0 HEADER................................................................................................ */
+     .header {
+         width:100%;
+         position: fixed;
+         z-index: 10;
+         background-color: rgba(0, 0, 0, .5);
+     }
+     .header .logo {
+         width:40%;
+         float: left;
+     }
+     .nav{
+         width:60%;
+         float: left;
+         text-align: right;
+     }
+     .clear{
+         clear: both;
+     }
+     .header .container .header-content .nav > li{
+         list-style: none;
+         display: inline-block;
+     }
+     .header .container .header-content .nav > li > a{
+         color: red;
+         padding:12px;
+         display: block;
+     }
+     .header .container .header-content .nav > li > a:after ,
+     .header .container .header-content .nav  > li > a.active:after{
+         content:"";
+         width:0;
+         height:3px;
+         display: block;
+         background-color: blue;
+         margin-top: 2px;
+         transition: .5s;
+     }
+     .header .container .header-content .nav > li > a.active:after{
+      width:100%;
+    }
+     .header .container .header-content .nav > li > a:hover:after{
+         width: 100%;
+     }
+     .dd{
+         position: relative;
+     }
+     .a-bp{
+         color: white;
+         display: block;
+         padding: 10px;
+     }
+     .bp {
+         position: absolute;
+         width: 120px;
+         padding:5px;
+         background-color: blue;
+         text-align: center;
+         left:78%;
+         visibility: hidden;
+         opacity: 0;
+         transition: opacity 0.5s;
+         }
+         .dd:hover + .bp{
+             visibility: visible;
+             opacity:1;
+         }
+/* 3.1 HOME SECTION......................................................................................... */
+         .home {
+             height:100vh;
+             background-image:url(../images/ddd.jpg);
+             background-position: cover;
+             position: relative;
+         }
+         .home-content{
+             position: absolute;
+             top:50%;
+             left:50%;
+             transform: translate(-50%,-50%);
+             text-align: center;
+             width:65%;
+         }
+         .home-content .hhh {
+             color: #fff;
+             font-size: 55px;
+             text-transform: uppercase;
+         }
+         .para {
+             margin-top: 20px;
+             margin-bottom: 20px;
+             color: blanchedalmond;
+             letter-spacing: 1.5px;
+             line-height: 1.6px;
+         }
+         .home-content .btn {
+             min-width: 150px;
+             padding: 15px 0;
+             border-radius: 5px;
+             border: 0;
+             cursor: pointer;
+             font-size: 18px;
+         }
+         .btn-start {
+             margin-right: 10px;
+         }
+         .btn-learn{
+            background-color: blue;
+            color: cornsilk;
+         }
+/* 3.2 ABOUT SECTION......................................................................................... */
+         .pd-y {
+             padding:120px 0;
+         }
+         .about-content{
+             text-align: center;
+             height: 350px;
+             overflow: hidden;
+         }
+        .about-item {
+             width: 30%;
+             float: left;
+             text-align: center;
+             border:1px solid  #888;
+             padding: 30px 15px;
+         }
+         .about-item.mg{
+             margin: 0 5%;
+         }
+         .icon{
+             color: #6195ff;
+             margin-bottom: 10px;
+         }
+         .about-item-title {
+             text-transform: capitalize;
+             margin-bottom: 15px;
+             transition: color .5s;
+         }
+         .about-content p {
+             letter-spacing: 2px;
+             line-height: 22px;
+             margin-bottom: 15px;
+             color:#899;
+         }
+         .about-item-link {
+             color: #6195ff;
+             text-transform: capitalize;
+         }
+         .about-item:hover .about-item-title{
+             color: #fff;
+             transition: color 1s;
+         }
+/* 3.9 TEAM SECTION......................................................................................... */
+        .team-content{
+            overflow: hidden;
+            padding-left: 70px;
+        }
+        .team-item{
+            display: block;
+            float: left;
+            width: 28%;
+            background-color: #d1caca;
+            padding: 17px 13px;
+            text-align: center;
+            position: relative;
+        }
+        .team-img{
+            width: 90%;
+            margin: auto;
+            position: relative;
+        }
+        .team-overlay{
+            position: absolute;
+            top:0;
+            right:0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .5);
+            visibility: hidden;
+            opacity:0;
+        }
+        .team-item:hover .team-overlay{
+            visibility: visible;
+            opacity: 1;
+        }
+        .team-overlay a {
+            display: block;
+            width: 40px;
+            height:40px;
+            background-color: #7ba7ff;
+            color:#fff;
+            margin-left: auto;
+        }
+        .team-overlay a i{
+            line-height: 40px;
+        }
+        .team-info-title{
+            color:#222;
+            padding:10px 0;
+        }
+        .team-info-text{
+            color:#999;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .team-item.mg{
+            margin: 0 5%;
+        }
+        .team-img img{
+            width: 100%;
+        }
+        .team-item:after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            top:0;
+            left: 0;
+            background-color: #333;
+            opacity: 0;
+        }
+        .team-item:hover:after{
+            width: 100%;
+            height: 100%;
+            opacity:.4;
+            transition: 1s;
+        }
+        .team-item:hover .team-info-title{
+            color:#fff;
+            transition:  .5s;
+        }
+        .team-item:hover .team-info-text{
+            color: blue;
+            transition: 1s;
+        }
+/* 3.10 BLOG SECTION........................................................................................ */
+        .blog-content{
+            overflow: hidden;
+            background-color: #f8f8f8;
+        }
+        .blog-item{
+            float: left;
+            width: 30%;
+            background-color: #fff;
+            position: relative;
+        }
+        .blog-item-img{
+            width: 100%;
+            margin-left: 23px;
+        }
+        .blog-list{
+            list-style: none;
+            margin: 10px 0;
+        }
+        .blog-list li{
+            display: inline-block;
+            font-size: 12px;
+            margin: 0 5px;
+        }
+        .blog-list li  i{
+            color: #6195ff;
+        }
+        .blog-info{
+            padding: 20px;
+        }
+        .blog-title{
+            font-weight: bold;
+            margin: 20px 0;
+            margin-bottom: 25px;
+        }
+        .blog-desc{
+            color: #999;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .blog-link{
+            color: #6195ff;
+        }
+        .blog-item.mg{
+            margin: 0 5%;
+        }
+        .blog-item:after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            top: 0;
+            left: 0;
+            right: 0%;
+            bottom: 0;
+            transition: 1s;
+            opacity: 0;
+            background-color: #6195ff;
+        }
+        .blog-item:hover:after{
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+        }
+/* 3.11 FOOTER SECTION....................................................................................... */
+        .mmg{
+            width: 160px;
+            height: 70px;
+        }
+        .footer{
+            background-color: #4c4d52;
+            text-align: center;
+            height: 300px;
+            padding: 60px 0;
+        }
+        .footer-links{
+            list-style: none;
+            margin: 20px 0;
+        }
+        .footer-links li{
+            display: inline-block;
+            background-color: #6195ff;
+            width:50px;
+            height: 50px;
+            position: relative;
+            z-index: 1;
+            border-radius: 50%;
+        }
+        .footer-links li a{
+            display: block;
+            width:100%;
+            height: 100%;
+            color:#6195ff;
+            color: #fff;
+            line-height: 50px;
+            padding-top: 15px;
+            padding-right: 15px;
+            font-size: 23px;
+            margin: 0 8px;
+        }
+        .footer-links li:after{
+            position: absolute;
+            content: "";
+            opacity: 0;
+            transition: .3s;
+            background-color: #0954ec;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0%;
+            bottom: 0;
+        }
+        .footer-links li:hover:after{
+            opacity: .7;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border-radius: 50%;
+        }
+        .footer p{
+            color:#999;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
